@@ -9,7 +9,7 @@ body {
   margin: 10px;
 }
 .weather-app {
-  border-left: 4px solid #bed7de;
+  border-left: 3px solid #bed7de;
   border-right: 5px solid #aec6cc;
   border-bottom: 8px solid #aec6cc;
   border-radius: 10px;
@@ -40,7 +40,7 @@ h1 {
   padding: 6px;
   border-right: 5px solid #c1d6dc;
   border-bottom: 6px solid #cbdee4;
-  border-left: 4px solid #cce2e8;
+  border-left: 3px solid #cce2e8;
   border-radius: 20px;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
@@ -74,7 +74,7 @@ h2 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
-  border-left: solid 2px#c2d4d2;
+  border-left: solid 1px#c2d4d2;
   border-right: solid 4px #c2d4d2;
 }
 
@@ -107,7 +107,8 @@ h2 {
   color: black;
   cursor: default;
 }
-a {
+#fahrenheit-link,
+#celsius-link {
   text-decoration: none !important;
 }
 h3 {
