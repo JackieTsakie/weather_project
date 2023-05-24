@@ -101,19 +101,24 @@ h2 {
   cursor: pointer;
 }
 h3 {
-  line-height: 25px;
-  font-family: sans-serif;
-  display: block;
-  margin: 0 auto;
-  width: 300px;
   background: radial-gradient(
     circle at 10% 20%,
     rgba(216, 241, 230, 0.46) 0.1%,
     rgba(233, 226, 226, 0.28) 90.1%
   );
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  line-height: 25px;
+  font-family: sans-serif;
+}
+
+h3:first-letter {
+  text-transform: capitalize;
 }
 .icons-current {
   font-size: 80px;
+  margin-top: 20px;
 }
 
 .cardbody {
@@ -174,7 +179,7 @@ h3 {
 
 ul li {
   text-align: center;
-  padding: 0;
+  padding: 2px;
   margin: 0;
 }
 
