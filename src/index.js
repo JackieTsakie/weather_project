@@ -49,6 +49,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png `
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -63,6 +65,11 @@ function handleSubmit(event) {
   search(city);
 }
 
+let form = document.querySelector(".weather-app-form");
+form.addEventListener("submit", handleSubmit);
+
+search("New York");
+
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -73,29 +80,28 @@ function showTemperature(response) {
 function convert(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(69.8);
-  // let temperature = temperatureElement.innerHTML;
-  // temperature = Number(temperature);
-  // temperatureElement.innerHTML = Math.round(temperature * 9) / 5 + 32;
+  temperatureCel.classList.remove("active");
+  temperatureFah.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 function convertCel(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 21;
-
+  temperatureCel.classList.add("active");
+  temperatureFah.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   // temperature = Number(temperature);
   // temperatureElement.innerHTML = Math.round[(fahrenheit-32) * 5]/9;
 }
 
+let celsiusTemperature = null;
+
 let temperatureFah = document.querySelector("#fahrenheit-link");
 temperatureFah.addEventListener("click", convert);
+
 let temperatureCel = document.querySelector("#celsius-link");
 temperatureCel.addEventListener("click", convertCel);
-
-let form = document.querySelector(".weather-app-form");
-form.addEventListener("submit", handleSubmit);
-
-search("New York");
 
 function showPosition(position) {
   // let h1 = document.querySelector("h1");
