@@ -170,12 +170,14 @@ ul li {
   transition: all 150ms ease-in-out;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   margin-top: 10px;
+  display: block;
+  margin: 10px auto;
 }
 .weather-forecast-cardbody:hover {
   background: rgb(193, 247, 247);
   background-size: 5px;
   color: black;
-  cursor: pointer;
+  cursor: default;
   text-decoration: none;
 }
 
@@ -184,39 +186,34 @@ ul li {
   font-size: large;
   font-weight: 600;
   border-radius: 5px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .weather-forecast-temperatures {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
 }
-/* .weather-forecast-temperatures :hover {
-  background: rgb(166, 233, 245);
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-} */
+
 .weather-forecast-temp-min {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
-.icons {
+.weather-forecast-cardbody img {
   text-align: center;
   display: block;
-  margin: 0 auto;
-  padding: 10px;
-  font-size: xx-large;
+  margin: 0 10px;
 }
 
-.weather-forecast-wind {
-  text-align: center;
+.wind-forecast {
+  opacity: 0.3;
+  font-size: 12px;
 }
 
 .footer {
   text-align: center;
   margin: 30px auto 0;
-  font-size: medium;
+  width: 300px;
+  font-size: small;
   font-family: monospace;
-  background-color: #bedfea;
+  background-color: #b4d3de;
 }
