@@ -164,8 +164,6 @@ let temperatureCel = document.querySelector("#celsius-link");
 temperatureCel.addEventListener("click", convertCel);
 
 function showPosition(position) {
-  // let h1 = document.querySelector("h1");
-  // h1.innerHTML = `Your latitude is , your longitude is  and your temperature is `;
   let apiKey = "bde2a78fb83f6711e5b697e805f6cfad";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
