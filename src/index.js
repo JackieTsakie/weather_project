@@ -129,7 +129,7 @@ function handleSubmit(event) {
 let form = document.querySelector(".weather-app-form");
 form.addEventListener("submit", handleSubmit);
 
-search("New York");
+search("Zurich");
 
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
